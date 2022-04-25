@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:controller="com.example.rezervacni_system.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" styleClass="background" stylesheets="@Style/style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" styleClass="background" stylesheets="@Style/style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rezervacni_system.MainController">
    <children>
       <VBox alignment="CENTER" layoutX="25.0" layoutY="8.0" prefHeight="535.0" prefWidth="547.0" spacing="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="8.0">
          <children>
@@ -37,7 +37,7 @@
                   <InnerShadow />
                </effect></Button>
             <!--ukonceni aplikace -->
-            <Button mnemonicParsing="false" styleClass="button-style" stylesheets="@Style/style.css" text="KONEC">
+            <Button mnemonicParsing="false" onAction="#konec" styleClass="button-style" stylesheets="@Style/style.css" text="KONEC">
                <effect>
                   <InnerShadow />
                </effect></Button>

@@ -34,16 +34,19 @@ import java.util.ResourceBundle;
     @FXML
     public void NoveOknoRezervace(ActionEvent actionEvent) throws IOException {
         System.out.println("Rezervace");
-        root = FXMLLoader.load(getClass().getResource())
+        root = FXMLLoader.load(getClass().getResource("Rezervace.fxml"));
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);;
         stage.setScene(scene);
         stage.setMaximized(false);
         stage.setMinHeight(600);
         stage.setMinWidth(550);
-        stage.setResizable(false);
+
         stage.show();
     }
 
 
+        public void konec(ActionEvent actionEvent) {
+        Platform.exit();
+        }
     }

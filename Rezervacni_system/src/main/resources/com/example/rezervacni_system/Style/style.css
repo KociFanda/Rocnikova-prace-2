@@ -17,3 +17,7 @@
 .background{
   -fx-background-color: #b2b6aa;
 }
+.zidle{
+    -fx-fit-to-width: 64px;
+    -fx-fit-to-height: 64px;
+}
