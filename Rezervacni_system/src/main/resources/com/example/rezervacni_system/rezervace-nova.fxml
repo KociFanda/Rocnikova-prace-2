@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rezervacni_system.Rezervace">
+   <children>
+      <Label layoutX="167.0" layoutY="22.0" prefHeight="48.0" prefWidth="267.0" styleClass="title2" stylesheets="@Style/style.css" text="Vyberte si stůl" />
+   </children>
+</AnchorPane>

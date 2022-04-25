@@ -1,0 +1,19 @@
+.title {
+    -fx-font-family: Elephant;
+    -fx-font-size: 45px;
+    -fx-underline: true;
+}
+.title2 {
+    -fx-font-family: Arial Black;
+    -fx-font-size: 40px;
+}
+.button-style{
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-font-size: 35px;
+    -fx-font-family: Elephant;
+
+}
+.background{
+  -fx-background-color: #b2b6aa;
+}
