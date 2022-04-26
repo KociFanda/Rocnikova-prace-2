@@ -8,24 +8,9 @@
    <children>
       <Button layoutX="14.0" layoutY="601.0" mnemonicParsing="false" onAction="#zpatky" styleClass="button-style" stylesheets="@Style/style.css" text="Button" />
       <Label layoutX="385.0" layoutY="8.0" styleClass="title" stylesheets="@Style/style.css" text="Label" />
-      <ImageView fitHeight="203.0" fitWidth="304.0" layoutX="41.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="535.0" fitWidth="817.0" layoutX="23.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/stul-se-stoly-velky3.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="62.0" layoutX="613.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/zidle-dole3.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="104.0" fitWidth="104.0" layoutX="589.0" layoutY="137.0" pickOnBounds="true">
-         <image>
-            <Image url="@img/stul.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="98.0" fitWidth="104.0" layoutX="441.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/zidle-levo3.png" />
+            <Image url="@img/Rezervace%20pozadí.png" />
          </image>
       </ImageView>
    </children>
