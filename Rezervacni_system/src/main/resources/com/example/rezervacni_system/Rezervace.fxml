@@ -1,17 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rezervacni_system.RezervaceController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="background" stylesheets="@Style/style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rezervacni_system.RezervaceController">
    <children>
-      <Button layoutX="14.0" layoutY="601.0" mnemonicParsing="false" onAction="#zpatky" styleClass="button-style" stylesheets="@Style/style.css" text="Button" />
-      <Label layoutX="385.0" layoutY="8.0" styleClass="title" stylesheets="@Style/style.css" text="Label" />
-      <ImageView fitHeight="535.0" fitWidth="817.0" layoutX="23.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="14.0" layoutY="596.0" mnemonicParsing="false" onAction="#zpatky" prefHeight="50.0" prefWidth="133.0" styleClass="button-style2" stylesheets="@Style/style.css" text="Zpátky" />
+      <Label layoutX="298.0" layoutY="14.0" styleClass="title" stylesheets="@Style/style.css" text="Vyberte si " />
+      <ImageView fitHeight="518.0" fitWidth="736.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/Rezervace%20pozadí.png" />
+            <Image url="@img/Rezervacepozadi2.png" />
          </image>
       </ImageView>
+
+      <Button layoutX="715.0" layoutY="582.0" mnemonicParsing="false" onAction="#vytvoritRezervaci" prefHeight="57.0" prefWidth="194.0" styleClass="button-style" stylesheets="@Style/style.css" text="Potvrdit" />
+
+
+      <CheckBox fx:id="malyStul2" layoutX="506.0" layoutY="488.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="velkyStul4" layoutX="187.0" layoutY="230.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="velkyStul5" layoutX="106.0" layoutY="230.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="velkyStul3" layoutX="266.0" layoutY="161.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulNahore2" layoutX="649.0" layoutY="172.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="velkyStul2" layoutX="187.0" layoutY="94.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulDole4" layoutX="74.0" layoutY="470.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulDole1" layoutX="148.0" layoutY="403.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="malyStul1" layoutX="649.0" layoutY="488.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulNahore3" layoutX="575.0" layoutY="222.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="velkyStul6" layoutX="25.0" layoutY="161.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulNahore4" layoutX="499.0" layoutY="172.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulNahore1" layoutX="575.0" layoutY="105.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="velkyStul1" layoutX="106.0" layoutY="94.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulDole3" layoutX="148.0" layoutY="523.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="stredniStulDole2" layoutX="219.0" layoutY="471.0" mnemonicParsing="false" opacity="0.83" prefHeight="29.0" prefWidth="17.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </CheckBox>
+      <TextArea fx:id="rezervaceSouhrn" editable="false" layoutX="735.0" layoutY="296.0" prefHeight="249.0" prefWidth="155.0">
+         <effect>
+            <InnerShadow choke="0.21" />
+         </effect>
+      </TextArea>
+      <TextField fx:id="jmeno" layoutX="738.0" layoutY="110.0" prefHeight="35.0" prefWidth="155.0" promptText="Honza Poláček" />
+      <Label layoutX="738.0" layoutY="86.0" prefHeight="17.0" prefWidth="47.0" text="Jméno" />
+      <Label layoutX="738.0" layoutY="153.0" prefHeight="17.0" prefWidth="47.0" text="Email" />
+      <TextField fx:id="email" layoutX="738.0" layoutY="177.0" prefHeight="35.0" prefWidth="155.0" promptText="jan.novak@email.cz" />
+      <Label layoutX="766.0" layoutY="265.0" styleClass="title3" stylesheets="@Style/style.css" text="Souhrn" />
+
    </children>
 </AnchorPane>

@@ -27,4 +27,8 @@ public class RezervaceController {
         stage.setMinWidth(550);
         stage.show();
     }
+
+    public void vytvoritRezervaci(ActionEvent actionEvent) {
+        System.out.println("todo");
+    }
 }

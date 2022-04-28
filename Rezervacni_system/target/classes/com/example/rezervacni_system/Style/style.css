@@ -10,10 +10,23 @@
 .button-style{
     -fx-background-color: transparent;
     -fx-background-radius: 10px;
-    -fx-font-size: 35px;
+    -fx-font-size: 33px;
     -fx-font-family: Elephant;
 
 }
+.button-style2{
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+    -fx-font-size: 25px;
+    -fx-font-family: Elephant;
+}
+.custom-dashed-border {
+    -fx-border-color: blue ;
+    -fx-border-width: 5 ;
+    -fx-border-style: segments(10, 15, 15, 15)  line-cap round ;
+}
+
 .background{
   -fx-background-color: #b2b6aa;
 }
+
