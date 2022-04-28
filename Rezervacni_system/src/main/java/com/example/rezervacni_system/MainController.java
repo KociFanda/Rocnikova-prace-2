@@ -41,6 +41,7 @@ import java.util.ResourceBundle;
         stage.setMaximized(false);
         stage.setMinHeight(600);
         stage.setMinWidth(550);
+        stage.setResizable(false);
 
         stage.show();
     }

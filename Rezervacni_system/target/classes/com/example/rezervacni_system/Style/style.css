@@ -7,6 +7,14 @@
     -fx-font-family: Arial Black;
     -fx-font-size: 40px;
 }
+.title3 {
+    -fx-font-family: Elephant;
+    -fx-font-size: 25px;
+}
+.label-better{
+
+}
+
 .button-style{
     -fx-background-color: transparent;
     -fx-background-radius: 10px;
