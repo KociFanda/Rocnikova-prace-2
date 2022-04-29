@@ -20,7 +20,6 @@ public class KontaktController {
         root = FXMLLoader.load(getClass().getResource("Hlavni-menu.fxml"));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
-
         stage.setScene(scene);
         stage.setMaximized(false);
         stage.setMinHeight(500);

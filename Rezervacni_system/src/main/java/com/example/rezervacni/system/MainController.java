@@ -59,7 +59,7 @@ import java.util.ResourceBundle;
             scene = new Scene(root);;
             stage.setScene(scene);
             stage.setMaximized(false);
-            stage.setMinHeight(500);
+            stage.setMinHeight(400);
             stage.setMinWidth(600);
             stage.setResizable(false);
 
@@ -76,7 +76,7 @@ import java.util.ResourceBundle;
             scene = new Scene(root);;
             stage.setScene(scene);
             stage.setMaximized(false);
-            stage.setMinHeight(500);
+            stage.setMinHeight(400);
             stage.setMinWidth(600);
             stage.setResizable(false);
 

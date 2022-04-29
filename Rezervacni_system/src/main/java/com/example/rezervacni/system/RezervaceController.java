@@ -58,8 +58,8 @@ public class RezervaceController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setMaximized(false);
-        stage.setMinHeight(600);
-        stage.setMinWidth(550);
+        stage.setMinHeight(500);
+        stage.setMinWidth(600);
         stage.show();
     }
 
@@ -76,58 +76,69 @@ public class RezervaceController {
         //Velky stul pro 6 lidí
         if (velkyStul1.isSelected()) {
             rezervaceFINALE.add(velkyStul1.getId().toString());
-        }  if (velkyStul2.isSelected()) {
+        }
+        if (velkyStul2.isSelected()) {
             rezervaceFINALE.add(velkyStul2.getId().toString());
-        }  if (velkyStul3.isSelected()) {
+        }
+        if (velkyStul3.isSelected()) {
             rezervaceFINALE.add(velkyStul3.getId().toString());
-        }  if (velkyStul4.isSelected()) {
+        }
+        if (velkyStul4.isSelected()) {
             rezervaceFINALE.add(velkyStul4.getId().toString());
-        }  if (velkyStul5.isSelected()) {
+        }
+        if (velkyStul5.isSelected()) {
             rezervaceFINALE.add(velkyStul5.getId().toString());
-        }  if (velkyStul6.isSelected()) {
+        }
+        if (velkyStul6.isSelected()) {
             rezervaceFINALE.add(velkyStul6.getId().toString());
         }
         //maly stul pro 2
-        else if (malyStul1.isSelected()) {
+        if (malyStul1.isSelected()) {
             rezervaceFINALE.add(malyStul1.getId().toString());
-        } else if (malyStul2.isSelected()) {
+        }
+        if (malyStul2.isSelected()) {
             rezervaceFINALE.add(malyStul2.getId().toString());
         }
         //stredni stul pro 4 DOLE
-        else if (stredniStulDole1.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole1.toString());
-        } else if (stredniStulDole2.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole2.toString());
-        } else if (stredniStulDole3.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole3.toString());
-        } else if (stredniStulDole4.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole4.toString());
+        if (stredniStulDole1.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole1.getId().toString());
+        }
+        if (stredniStulDole2.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole2.getId().toString());
+        }
+        if (stredniStulDole3.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole3.getId().toString());
+        }
+        if (stredniStulDole4.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole4.getId().toString());
         }
         //stredni stul pro 4 NAHORE
-        else if (stredniStulNahore1.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore1.toString());
-        } else if (stredniStulNahore1.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore1.toString());
-        } else if (stredniStulNahore1.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore1.toString());
-        } else if (stredniStulNahore1.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore1.toString());
+        if (stredniStulNahore1.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore1.getId().toString());
+        }
+        if (stredniStulNahore2.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore2.getId().toString());
+        }
+        if (stredniStulNahore3.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore3.getId().toString());
+        }
+        if (stredniStulNahore4.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore4.getId().toString());
         }
         jmeno2 = jmeno.getText();
         email2 = email.getText();
         cas2 = cas.getText();
         datum2 = datum.getValue().toString();
-if(jmeno2 != null && email2 != null && cas2 != null && datum2 != null){
-    rezervaceFINALE.add(jmeno2);
-    rezervaceFINALE.add(email2);
-    rezervaceFINALE.add(cas2);
-    rezervaceFINALE.add(datum2);
-        writeToFile.write(rezervaceFINALE);
+        if (jmeno2 != null && email2 != null && cas2 != null && datum2 != null) {
+            rezervaceFINALE.add(jmeno2);
+            rezervaceFINALE.add(email2);
+            rezervaceFINALE.add(cas2);
+            rezervaceFINALE.add(datum2);
+            writeToFile.write(rezervaceFINALE);
 
-    }
-    else{
-    System.out.println("spatny vstupni udaje v jmeno email cas datum");
-    }
+        } else {
+            System.out.println("spatny vstupni udaje v jmeno email cas datum");
+        }
 
 
     }
@@ -144,7 +155,7 @@ if(jmeno2 != null && email2 != null && cas2 != null && datum2 != null){
         String part4 = parts2[1];
 
         String vybrany_stul_id = part3;
-       // System.out.println("ID vybraného stolu je :" + vybrany_stul_id);
+        // System.out.println("ID vybraného stolu je :" + vybrany_stul_id);
 
         switch (vybrany_stul_id) {
             case "malyStul1", "malyStul2":
@@ -246,7 +257,7 @@ if(jmeno2 != null && email2 != null && cas2 != null && datum2 != null){
                 velkyStul6.setDisable(true);
                 break;
 
-            case "stredniStulNahore1", "stredniStulNahore2", "stredniStulNahore3", "stredniStulNahore4":{
+            case "stredniStulNahore1", "stredniStulNahore2", "stredniStulNahore3", "stredniStulNahore4": {
 
                 malyStul1.setVisible(false);
                 malyStul2.setVisible(false);
