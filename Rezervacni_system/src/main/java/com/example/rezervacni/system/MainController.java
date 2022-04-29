@@ -1,4 +1,4 @@
-package com.example.rezervacni_system;
+package com.example.rezervacni.system;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

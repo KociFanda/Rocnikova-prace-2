@@ -1,5 +1,6 @@
-package com.example.rezervacni_system;
+package com.example.rezervacni.system;
 
+import com.example.rezervacni.system.Save.writeToFile;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class RezervaceController {
 
@@ -57,8 +59,63 @@ public class RezervaceController {
         stage.show();
     }
 
-    public void vytvoritRezervaci(ActionEvent actionEvent) {
-        System.out.println("todo");
+
+    ArrayList<String> rezervaceFINALE = new ArrayList<String>();
+
+
+    public void vytvoritRezervaci(ActionEvent actionEvent) throws IOException {
+        System.out.println("VYTVÁŘÍM REZERVACI. ZÁPIS DO DATABÁZE");
+        //Velky stul pro 6 lidí
+        if (velkyStul1.isSelected()) {
+            rezervaceFINALE.add(velkyStul1.getId().toString());
+        }  if (velkyStul2.isSelected()) {
+            rezervaceFINALE.add(velkyStul2.getId().toString());
+        }  if (velkyStul3.isSelected()) {
+            rezervaceFINALE.add(velkyStul3.getId().toString());
+        }  if (velkyStul4.isSelected()) {
+            rezervaceFINALE.add(velkyStul4.getId().toString());
+        }  if (velkyStul5.isSelected()) {
+            rezervaceFINALE.add(velkyStul5.getId().toString());
+        }  if (velkyStul6.isSelected()) {
+            rezervaceFINALE.add(velkyStul6.getId().toString());
+        }
+        //maly stul pro 2
+        else if (malyStul1.isSelected()) {
+            rezervaceFINALE.add(malyStul1.getId().toString());
+        } else if (malyStul2.isSelected()) {
+            rezervaceFINALE.add(malyStul2.getId().toString());
+        }
+        //stredni stul pro 4 DOLE
+        else if (stredniStulDole1.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole1.toString());
+        } else if (stredniStulDole2.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole2.toString());
+        } else if (stredniStulDole3.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole3.toString());
+        } else if (stredniStulDole4.isSelected()) {
+            rezervaceFINALE.add(stredniStulDole4.toString());
+        }
+        //stredni stul pro 4 NAHORE
+        else if (stredniStulNahore1.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore1.toString());
+        } else if (stredniStulNahore1.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore1.toString());
+        } else if (stredniStulNahore1.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore1.toString());
+        } else if (stredniStulNahore1.isSelected()) {
+            rezervaceFINALE.add(stredniStulNahore1.toString());
+        }
+        writeToFile.write(rezervaceFINALE );
+
+
+       /* for (int i = 0; i < rezervaceFINALE.toArray().length; i++) {
+
+        } {
+            System.out.println(rezervaceFINALE);
+
+
+        }
+        */
     }
 
     public void select(ActionEvent actionEvent) {
@@ -73,7 +130,7 @@ public class RezervaceController {
         String part4 = parts2[1];
 
         String vybrany_stul_id = part3;
-        System.out.println("ID vybraného stolu je :" + vybrany_stul_id);
+       // System.out.println("ID vybraného stolu je :" + vybrany_stul_id);
 
         switch (vybrany_stul_id) {
             case "malyStul1", "malyStul2":
@@ -175,7 +232,7 @@ public class RezervaceController {
                 velkyStul6.setDisable(true);
                 break;
 
-            case "stredniStulNahore1", "stredniStulNahore2", "stredniStulNahore3", "strednStulnNahore4":{
+            case "stredniStulNahore1", "stredniStulNahore2", "stredniStulNahore3", "stredniStulNahore4":{
 
                 malyStul1.setVisible(false);
                 malyStul2.setVisible(false);

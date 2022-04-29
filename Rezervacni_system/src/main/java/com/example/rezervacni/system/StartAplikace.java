@@ -1,4 +1,4 @@
-package com.example.rezervacni_system;
+package com.example.rezervacni.system;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
