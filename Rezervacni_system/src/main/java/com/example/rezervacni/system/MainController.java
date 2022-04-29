@@ -39,8 +39,8 @@ import java.util.ResourceBundle;
         scene = new Scene(root);;
         stage.setScene(scene);
         stage.setMaximized(false);
-        stage.setMinHeight(600);
-        stage.setMinWidth(550);
+        stage.setMinHeight(700);
+        stage.setMinWidth(600);
         stage.setResizable(false);
 
         stage.show();
@@ -49,5 +49,38 @@ import java.util.ResourceBundle;
 
         public void konec(ActionEvent actionEvent) {
         Platform.exit();
+        }
+
+        public void prehled(ActionEvent actionEvent) throws IOException {
+            System.out.println("Přehled");
+
+            root = FXMLLoader.load(getClass().getResource("Prehled.fxml"));
+            stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            scene = new Scene(root);;
+            stage.setScene(scene);
+            stage.setMaximized(false);
+            stage.setMinHeight(500);
+            stage.setMinWidth(600);
+            stage.setResizable(false);
+
+            stage.show();
+
+
+        }
+
+        public void kontakt(ActionEvent actionEvent) throws IOException {
+            System.out.println("Kontakt");
+
+            root = FXMLLoader.load(getClass().getResource("Kontakt.fxml"));
+            stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            scene = new Scene(root);;
+            stage.setScene(scene);
+            stage.setMaximized(false);
+            stage.setMinHeight(500);
+            stage.setMinWidth(600);
+            stage.setResizable(false);
+
+            stage.show();
+
         }
     }

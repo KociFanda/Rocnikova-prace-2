@@ -1,12 +1,13 @@
 package com.example.rezervacni.system;
 
-import com.example.rezervacni.system.Save.writeToFile;
+import com.example.rezervacni.system.save.writeToFile;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -37,8 +38,12 @@ public class RezervaceController {
     public CheckBox stredniStulDole4;
 
     public TextArea rezervaceSouhrn;
+
+
     public TextField jmeno;
     public TextField email;
+    public TextField cas;
+    public DatePicker datum;
 
 
     private Stage stage;
@@ -51,7 +56,6 @@ public class RezervaceController {
         root = FXMLLoader.load(getClass().getResource("Hlavni-menu.fxml"));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        ;
         stage.setScene(scene);
         stage.setMaximized(false);
         stage.setMinHeight(600);
@@ -61,6 +65,10 @@ public class RezervaceController {
 
 
     ArrayList<String> rezervaceFINALE = new ArrayList<String>();
+    String jmeno2;
+    String email2;
+    String cas2;
+    String datum2;
 
 
     public void vytvoritRezervaci(ActionEvent actionEvent) throws IOException {
@@ -105,17 +113,23 @@ public class RezervaceController {
         } else if (stredniStulNahore1.isSelected()) {
             rezervaceFINALE.add(stredniStulNahore1.toString());
         }
-        writeToFile.write(rezervaceFINALE );
+        jmeno2 = jmeno.getText();
+        email2 = email.getText();
+        cas2 = cas.getText();
+        datum2 = datum.getValue().toString();
+if(jmeno2 != null && email2 != null && cas2 != null && datum2 != null){
+    rezervaceFINALE.add(jmeno2);
+    rezervaceFINALE.add(email2);
+    rezervaceFINALE.add(cas2);
+    rezervaceFINALE.add(datum2);
+        writeToFile.write(rezervaceFINALE);
+
+    }
+    else{
+    System.out.println("spatny vstupni udaje v jmeno email cas datum");
+    }
 
 
-       /* for (int i = 0; i < rezervaceFINALE.toArray().length; i++) {
-
-        } {
-            System.out.println(rezervaceFINALE);
-
-
-        }
-        */
     }
 
     public void select(ActionEvent actionEvent) {
