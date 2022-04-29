@@ -22,77 +22,23 @@ public class PrehledController {
 
     public void initialize() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("databaze.txt"));
-        String vypis = " ";
-        if (br.readLine() != null){vypis = br.readLine();}
-        else{vypis =" "; }
-        if (vypis == null){
-            vypis = "zadna data ";
+        String staryVypis = prehledVypis.getText();
+        if (staryVypis == null) {
+            staryVypis = "zadna data";
         }
+        String vypis = "zadna data";
+        vypis = br.readLine();
+        if (vypis == null) {
+            vypis = "zadna data";
+        }
+        System.out.println(vypis);
         String vypis2 = vypis.replace("[", "");
         String vypis3 = vypis2.replace("]", "");
         String vypis4 = vypis3.replace(",", "");
-        prehledVypis.setText("Rezervace: " + vypis4 + "\n");
-/*
-        String[]KONECNYvypis = vypis4.split(" ");
-
-        String misto1;
-        String misto2;
-        String misto3;
-        String misto4;
-        String misto5;
-        String misto6;
-
-        if(KONECNYvypis[1].contains("stul")){
-             misto1 = KONECNYvypis[1];
-        }
-        else{
-            misto1="";
-        }
-        //
-        if(KONECNYvypis[2].contains("stul")){
-             misto2 = KONECNYvypis[2];
-        }
-        else{
-            misto2="";
-        }
-        //
-        if(KONECNYvypis[3].contains("stul")){
-            misto3 = KONECNYvypis[3];
-        }
-        else{
-            misto3="";
-        }
-        //
-        if(KONECNYvypis[4].contains("stul")){
-             misto4= KONECNYvypis[4];
-        }
-        else{
-            misto4="";
-        }
-        //
-        if(KONECNYvypis[5].contains("stul")){
-             misto5 = KONECNYvypis[5];
-        }
-        else{
-            misto5="";
-        }
-        //
-        if(KONECNYvypis[6].contains("stul")){
-             misto6 = KONECNYvypis[6];
-        }
-        else{
-            misto6="";
-        }
-
-
-
-        System.out.println(vypis4);
-
         prehledVypis.setText(
-                "Rezervovaná místa:" + misto1 + "," + misto2 + "," + misto3 + "," + misto4 + "," + misto5 + "," + misto6 +
-                        "Jmeno"
-        );
-*/
+                staryVypis + "\n" +
+                        "Rezervace: " + vypis4 + "\n");
+        staryVypis = prehledVypis.getText();
 
     }
 

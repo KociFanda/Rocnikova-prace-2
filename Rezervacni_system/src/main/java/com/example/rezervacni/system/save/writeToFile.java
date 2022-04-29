@@ -10,9 +10,10 @@ public class writeToFile {
     public static void write(ArrayList<String> rezervaceFINALE) throws IOException {
         FileWriter myWriter = new FileWriter("databaze.txt");
         BufferedReader br = new BufferedReader(new FileReader("databaze.txt"));
-        String fileOldVersion = br.readLine();
-        myWriter.write(fileOldVersion + String.valueOf(rezervaceFINALE));
 
+
+
+        myWriter.write(String.valueOf(rezervaceFINALE));
         myWriter.flush();
         myWriter.close();
 

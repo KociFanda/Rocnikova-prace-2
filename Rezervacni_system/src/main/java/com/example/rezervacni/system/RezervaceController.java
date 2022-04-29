@@ -12,6 +12,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -50,6 +52,64 @@ public class RezervaceController {
     private Scene scene;
     private Parent root;
 
+    public void initialize() throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader("databaze.txt"));
+        String dostupnostMist = br.readLine();
+        System.out.println(dostupnostMist);
+        if(dostupnostMist == null){
+            dostupnostMist = " ";
+        }
+        if (dostupnostMist.contains("velkyStul")){
+            velkyStul1.setVisible(false);
+            velkyStul2.setVisible(false);
+            velkyStul3.setVisible(false);
+            velkyStul4.setVisible(false);
+            velkyStul5.setVisible(false);
+            velkyStul6.setVisible(false);
+            //
+            velkyStul1.setDisable(true);
+            velkyStul2.setDisable(true);
+            velkyStul3.setDisable(true);
+            velkyStul4.setDisable(true);
+            velkyStul5.setDisable(true);
+            velkyStul6.setDisable(true);
+
+
+        }
+        if (dostupnostMist.contains("malyStul")){
+            malyStul1.setVisible(false);
+            malyStul2.setVisible(false);
+            //
+            malyStul1.setDisable(true);
+            malyStul2.setDisable(true);
+
+
+        }
+        if (dostupnostMist.contains("stredniStulDole")){
+            stredniStulDole1.setVisible(false);
+            stredniStulDole2.setVisible(false);
+            stredniStulDole3.setVisible(false);
+            stredniStulDole4.setVisible(false);
+             //
+            stredniStulDole1.setDisable(true);
+            stredniStulDole2.setDisable(true);
+            stredniStulDole3.setDisable(true);
+            stredniStulDole4.setDisable(true);
+        }
+        if (dostupnostMist.contains("stredniStulNahore")){
+            stredniStulNahore1.setVisible(false);
+            stredniStulNahore2.setVisible(false);
+            stredniStulNahore3.setVisible(false);
+            stredniStulNahore4.setVisible(false);
+            //
+            stredniStulNahore1.setDisable(true);
+            stredniStulNahore2.setDisable(true);
+            stredniStulNahore3.setDisable(true);
+            stredniStulNahore4.setDisable(true);
+        }
+
+    }
+
     public void zpatky(ActionEvent actionEvent) throws IOException {
         System.out.println("Hlavní menu");
 
@@ -75,55 +135,55 @@ public class RezervaceController {
         System.out.println("VYTVÁŘÍM REZERVACI. ZÁPIS DO DATABÁZE");
         //Velky stul pro 6 lidí
         if (velkyStul1.isSelected()) {
-            rezervaceFINALE.add(velkyStul1.getId().toString());
+            rezervaceFINALE.add(velkyStul1.getId());
         }
         if (velkyStul2.isSelected()) {
-            rezervaceFINALE.add(velkyStul2.getId().toString());
+            rezervaceFINALE.add(velkyStul2.getId());
         }
         if (velkyStul3.isSelected()) {
-            rezervaceFINALE.add(velkyStul3.getId().toString());
+            rezervaceFINALE.add(velkyStul3.getId());
         }
         if (velkyStul4.isSelected()) {
-            rezervaceFINALE.add(velkyStul4.getId().toString());
+            rezervaceFINALE.add(velkyStul4.getId());
         }
         if (velkyStul5.isSelected()) {
-            rezervaceFINALE.add(velkyStul5.getId().toString());
+            rezervaceFINALE.add(velkyStul5.getId());
         }
         if (velkyStul6.isSelected()) {
-            rezervaceFINALE.add(velkyStul6.getId().toString());
+            rezervaceFINALE.add(velkyStul6.getId());
         }
         //maly stul pro 2
         if (malyStul1.isSelected()) {
-            rezervaceFINALE.add(malyStul1.getId().toString());
+            rezervaceFINALE.add(malyStul1.getId());
         }
         if (malyStul2.isSelected()) {
-            rezervaceFINALE.add(malyStul2.getId().toString());
+            rezervaceFINALE.add(malyStul2.getId());
         }
         //stredni stul pro 4 DOLE
         if (stredniStulDole1.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole1.getId().toString());
+            rezervaceFINALE.add(stredniStulDole1.getId());
         }
         if (stredniStulDole2.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole2.getId().toString());
+            rezervaceFINALE.add(stredniStulDole2.getId());
         }
         if (stredniStulDole3.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole3.getId().toString());
+            rezervaceFINALE.add(stredniStulDole3.getId());
         }
         if (stredniStulDole4.isSelected()) {
-            rezervaceFINALE.add(stredniStulDole4.getId().toString());
+            rezervaceFINALE.add(stredniStulDole4.getId());
         }
         //stredni stul pro 4 NAHORE
         if (stredniStulNahore1.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore1.getId().toString());
+            rezervaceFINALE.add(stredniStulNahore1.getId());
         }
         if (stredniStulNahore2.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore2.getId().toString());
+            rezervaceFINALE.add(stredniStulNahore2.getId());
         }
         if (stredniStulNahore3.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore3.getId().toString());
+            rezervaceFINALE.add(stredniStulNahore3.getId());
         }
         if (stredniStulNahore4.isSelected()) {
-            rezervaceFINALE.add(stredniStulNahore4.getId().toString());
+            rezervaceFINALE.add(stredniStulNahore4.getId());
         }
         jmeno2 = jmeno.getText();
         email2 = email.getText();
@@ -225,7 +285,7 @@ public class RezervaceController {
                 stredniStulNahore4.setDisable(true);
                 break;
 
-            case "stredniStulDole1", "stredniStulDole2", "stredniStulDole3", "strednStulDole4":
+            case "stredniStulDole1", "stredniStulDole2", "stredniStulDole3", "stredniStulDole4":
                 malyStul1.setVisible(false);
                 malyStul2.setVisible(false);
 
