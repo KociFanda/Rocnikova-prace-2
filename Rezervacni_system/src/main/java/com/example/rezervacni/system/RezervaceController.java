@@ -209,13 +209,12 @@ public class RezervaceController {
         String[] parts = source2.split("=");
         String part1 = parts[0];
         String part2 = parts[1];
-        String source3 = part2;
         String[] parts2 = part2.split(",");
         String part3 = parts2[0];
         String part4 = parts2[1];
 
         String vybrany_stul_id = part3;
-        // System.out.println("ID vybraného stolu je :" + vybrany_stul_id);
+
 
         switch (vybrany_stul_id) {
             case "malyStul1", "malyStul2":

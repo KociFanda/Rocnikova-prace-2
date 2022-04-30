@@ -12,7 +12,7 @@ public class StartAplikace extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartAplikace.class.getResource("Hlavni-menu.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 550);
-        stage.setTitle("Hello!");
+        stage.setTitle("Restaurace u Divočáka-Rezervace");
         stage.setScene(scene);
         stage.show();
         System.out.println("Start aplikace");
