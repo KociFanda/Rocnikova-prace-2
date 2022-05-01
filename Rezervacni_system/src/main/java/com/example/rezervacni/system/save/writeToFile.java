@@ -7,18 +7,21 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class writeToFile {
+
     public static void write(ArrayList<String> rezervaceFINALE) throws IOException {
-        FileWriter myWriter = new FileWriter("databaze.txt");
+
+        FileWriter myWriter = new FileWriter("databaze.txt", true);
         BufferedReader br = new BufferedReader(new FileReader("databaze.txt"));
 
+        myWriter.write(  String.valueOf(rezervaceFINALE) + "\n");
 
 
-        myWriter.write(String.valueOf(rezervaceFINALE));
         myWriter.flush();
         myWriter.close();
 
         String vysledek;
         vysledek = br.readLine();
+
         System.out.println(vysledek);
         br.close();
     }

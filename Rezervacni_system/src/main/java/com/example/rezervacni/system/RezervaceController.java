@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class RezervaceController {
 
@@ -54,7 +55,11 @@ public class RezervaceController {
 
     public void initialize() throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("databaze.txt"));
-        String dostupnostMist = br.readLine();
+
+        String dostupnostMist = "";
+
+        dostupnostMist =  br.lines().collect(Collectors.joining());
+
         System.out.println(dostupnostMist);
         if(dostupnostMist == null){
             dostupnostMist = " ";
@@ -193,7 +198,7 @@ public class RezervaceController {
             rezervaceFINALE.add(jmeno2);
             rezervaceFINALE.add(email2);
             rezervaceFINALE.add(cas2);
-            rezervaceFINALE.add(datum2);
+            rezervaceFINALE.add(datum2 + "?");
             writeToFile.write(rezervaceFINALE);
 
         } else {

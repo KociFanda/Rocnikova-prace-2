@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 public class PrehledController {
 
@@ -22,12 +23,11 @@ public class PrehledController {
 
     public void initialize() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("databaze.txt"));
-        String staryVypis = prehledVypis.getText();
-        if (staryVypis == null) {
-            staryVypis = "zadna data";
-        }
+
+
         String vypis = "zadna data";
-        vypis = br.readLine();
+        vypis =br.lines().collect(Collectors.joining());
+
         if (vypis == null) {
             vypis = "zadna data";
         }
@@ -35,10 +35,10 @@ public class PrehledController {
         String vypis2 = vypis.replace("[", "");
         String vypis3 = vypis2.replace("]", "");
         String vypis4 = vypis3.replace(",", "");
+        String vypis5 = vypis4.replace("?", "\nRezervace: ");
         prehledVypis.setText(
-                staryVypis + "\n" +
-                        "Rezervace: " + vypis4 + "\n");
-        staryVypis = prehledVypis.getText();
+                        "Rezervace: " + vypis5 + "\n");
+
 
     }
 
